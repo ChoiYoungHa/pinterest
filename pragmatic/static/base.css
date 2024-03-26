@@ -1,0 +1,27 @@
+.pragmatic_footer_logo{
+    font-family: 'Dongle', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pragmatic_header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.pragmatic_footer{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.pragmatic_content {
+    height: 20rem;
+    background-color: #38df81;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+
+
+
+
