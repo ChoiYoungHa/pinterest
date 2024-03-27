@@ -3,7 +3,18 @@
 {% block content %}
      <div class="pragmatic_content">
          <h1>헤드, 헤더, 푸터 다 상속 받은 후 블럭 컨텐츠에 내가 원하는 부분만 수정하기</h1>
+         <h2>깃푸시</h2>
+
+         <form action="/account/hello_world/" method="POST">
+             {% csrf_token %}
+             <input type="submit" class="btn btn-primary" value="POST">
+        </form>
+         <h1>{{ text }}</h1>
+
     </div>
+
+
+
 {% endblock %}
 
 

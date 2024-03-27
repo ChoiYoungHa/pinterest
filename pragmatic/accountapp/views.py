@@ -6,7 +6,13 @@ from django.shortcuts import render
 
 
 def hello_world(request):
-    return render(request, 'accountapp/hello_world.html')
+    if request.method == 'POST':
+        return render(request, 'accountapp/hello_world.html',
+                      context={'text': 'Post Method!!~!'})
+
+    else:
+        return render(request, 'accountapp/hello_world.html',
+                      context={'text': 'Get Method!!~!'})
 
 
 
