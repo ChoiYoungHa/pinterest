@@ -5,8 +5,22 @@
         <p>
             {{ target_user.date_joined }}
         </p>
-        <h3>
+        <h3 style="font-family: GmarketSansBold">
             {{ target_user.username }}
         </h3>
+
+        {% if target_user == user %}
+        <a href="{% url 'accountapp:update' pk=user.pk %}">
+            <p>
+                Change Info
+            </p>
+        </a>
+        <a href="{% url 'accountapp:delete' pk=user.pk %}">
+            <p>
+                Exit
+            </p>
+        </a>
+        {% endif %}
+
     </div>
 {% endblock %}
