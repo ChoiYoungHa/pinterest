@@ -35,6 +35,7 @@ def hello_world(request):
     else:
         return HttpResponseRedirect(reverse('accountapp:login'))
 
+# create view
 class AccountCreateView(CreateView):
     model = User
     form_class = UserCreationForm
