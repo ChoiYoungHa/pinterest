@@ -7,9 +7,15 @@
         </p>
 
         {% if target_user.profile %}
-        <h3 style="font-family: GmarketSansBold">
+        <img src="{{ target_user.profile.image.url }}" alt="" style="height: 10rem;
+        width: 10rem; border-radius: 20rem; margin: 1rem auto; display: block">
+        <h4 style="font-family: GmarketSansBold; display: inline-block;">
             {{ target_user.profile.nickname }}
-        </h3>
+        </h4>
+        <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}"
+           style="font-family: Dongle; font-size: 2rem">
+            edit
+        </a>
         {% else %}
         <a href="{% url 'profileapp:create' %}">
             <h2 style="font-family: 'Dongle', sans-serif">
@@ -17,6 +23,9 @@
             </h2>
         </a>
         {% endif %}
+        <h4>
+            {{ target_user.profile.message }}
+        </h4>
 
         {% if target_user == user %}
         <a href="{% url 'accountapp:update' pk=target_user.pk %}">
